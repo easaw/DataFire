@@ -1,14 +1,16 @@
 {
   "name": "datafire",
-  "version": "2.19.0",
+  "version": "2.21.0",
   "description": "",
   "main": "src/entry.js",
   "bin": {
     "datafire": "bin/datafire"
   },
+  "engines" : { "node" : ">=6.0.0" },
   "scripts": {
     "test": "mocha ./src/test --recursive && ./src/test/commands/run.sh",
-    "build": "./scripts/build.sh"
+    "build": "./scripts/build.sh",
+    "build-docs": "rm -rf ./docs && mkdir ./docs && lucybot build --directory ./web-docs --destination ./docs"
   },
   "author": "",
   "license": "MIT",
@@ -22,8 +24,9 @@
     "cron": "^1.2.1",
     "express": "^4.15.2",
     "inquirer": "^3.0.6",
-    "json-schema-faker": "^0.5.0-rc1",
+    "json-schema-faker-bb": "0.5.0-rc12",
     "memory-cache": "^0.2.0",
+    "moment": "^2.21.0",
     "prettyjson": "^1.2.1",
     "request": "^2.81.0",
     "rss-parser": "^2.7.0",
